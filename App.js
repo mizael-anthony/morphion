@@ -1,25 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Formulaire from './components/Formulaire';
+import Login from './components/Login';
+import Logout from './components/Logout';
+import MajFormulaire from './components/MajFormulaire';
+import Number from './components/Number';
+import Test from './components/Test';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text} >Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+  return(
+    
+    <MainApp/>
+    
+  )
+ 
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+class MainApp extends React.Component{
+  
+  state = {
+    isLoggedIn : false
+  }
 
-  text: {
-    color: '#f00',
-  },
-});
+  render(){
+    if(this.state.isLoggedIn){
+      return <Login onLoginPress={()=>this.setState({isLoggedIn : false})}/>
+    }
+    return <Logout onLogoutPress={()=>this.setState({isLoggedIn : true})}/>
+  }
+
+
+}
+
+
+
+
