@@ -1,15 +1,15 @@
 
 import React, { useState } from 'react'
-//import Form from './Form.js'
-//import Challenge from './Challenge.js'
-//import Demo from './Demo.js'
-//import Niv1 from './Niv1.js'
-//import Niv2 from './Niv2.js'
-//import Niv3 from './Niv3.js'
+import Form from './Form.js'
+// import Challenge from './Challenge.js'
+// import Demo from './Demo.js'
+// import Niv1 from './Niv1.js'
+// import Niv2 from './Niv2.js'
+// import Niv3 from './Niv3.js'
 
 const App = () => {
    return (
-   //   <Form />
+     <Form />
    //   <Challenge />
    //   <Demo message="Demo React" subtitle="Enjoy! "/>
    //   <Niv3 />
